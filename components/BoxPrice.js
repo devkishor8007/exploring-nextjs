@@ -19,7 +19,6 @@ export default function BoxPrice() {
   return (
     <Box
       bg={useColorModeValue("gray.200", "gray.500")}
-      mb={4}
       borderWidth="1px"
       shadow="base"
       borderRadius="xl"
@@ -27,7 +26,7 @@ export default function BoxPrice() {
     >
       <Box py={4} px={12}>
         <Text fontWeight="500" fontSize="2xl">
-         simple
+          simple
         </Text>
         <HStack justifyContent="center">
           <Text fontSize="3xl" fontWeight="600">

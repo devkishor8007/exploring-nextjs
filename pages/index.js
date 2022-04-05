@@ -1,19 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import {
-  Heading,
-  List,
-  ListIcon,
-  ListItem,
-  VStack,
-  useColorModeValue,
-  Stack,
-  Box,
-  Text,
-  HStack,
-  Button,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
 import { FaCheckCircle } from "react-icons/fa";
 import BoxPrice from "../components/BoxPrice";
@@ -35,11 +22,12 @@ export default function Home() {
           Get the exclusive package
         </Text>
         <SimpleGrid
-          direction={{ base: "row", md: "" }}
-          columns={3}
+          display={{ base: "row", sm: "row", md: "flex" }}
+          columns={{ base: 1, md: 3 }}
           justify="center"
           textAlign="center"
-          spacing={{ base: 4, lg: 10 }}
+          m="auto"
+          spacing={{ base: 8, md: 2, sm: 5, lg: 6 }}
         >
           <BoxPrice />
           <BoxPrice />
@@ -48,16 +36,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <Text>Develop by Kishor KC</Text>
       </footer>
     </div>
   );
