@@ -25,33 +25,41 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Text fontWeight="bold" mb="5px">
-          Fetching From API
-        </Text>
-        <VStack w="550px" justify="center" m="auto" display="column">
-          {/* slice(0, 5) */}
-          {/* show data from 0 to 5 i.e 5 is length  */}
-          {/* if not using  slice(0, 5)  where show all */}
-          {data.slice(0, 5).map((api, index) => {
-            return (
-              <>
-                <Flex borderRadius="7px" p="1rem" bg="grey">
-                  <Text color="white" ml={3} mr={3}>
-                    {index + 1}
-                  </Text>
-                  <Box>
-                    <Text fontWeight="bold" color="indigo">
-                      {api.name}
+      <Box>
+        <Box maxW="580px" m="auto">
+          <Text p="7px" textAlign="center" fontWeight="bold" mb="12px">
+            Fetching From API
+          </Text>
+          <VStack
+            mt={5}
+            p="5px"
+            justify="center"
+            m={{ base: "0", sm: "0", md: "0", lg: "auto" }}
+            display="column"
+          >
+            {/* slice(0, 5) */}
+            {/* show data from 0 to 5 i.e 5 is length  */}
+            {/* if not using  slice(0, 5)  where show all */}
+            {data.slice(0, 10).map((api, index) => {
+              return (
+                <div key={index}>
+                  <Flex borderRadius="7px" p="1rem" bg="grey">
+                    <Text color="white" ml={3} mr={3}>
+                      {index + 1}
                     </Text>
-                    <span>{api.email}</span>
-                  </Box>
-                </Flex>
-              </>
-            );
-          })}
-        </VStack>
-      </main>
+                    <Box>
+                      <Text fontWeight="bold" color="indigo">
+                        {api.name}
+                      </Text>
+                      <span>{api.email}</span>
+                    </Box>
+                  </Flex>
+                </div>
+              );
+            })}
+          </VStack>
+        </Box>
+      </Box>
 
       <footer className={styles.footer}>
         <Text>Develop by Kishor KC</Text>
