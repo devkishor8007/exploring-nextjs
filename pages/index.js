@@ -1,11 +1,9 @@
 import Head from "next/head";
-import { Heading, Text, Flex, Box, VStack } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
-
-
-
-export default function Home({ data }) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,10 +15,22 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     
-      <footer className={styles.footer}>
-        <Text>Develop by Kishor KC</Text>
-      </footer>
+      <main>
+        <Text>Image Optimization</Text>
+        <Image
+          alt="demo image"
+          src="/thirdtest.png"
+          height="450"
+          width="300"
+        ></Image>
+
+        <Image
+          alt="we are one"
+          src="https://images.unsplash.com/photo-1648544373484-b327f2051e60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          height="300"
+          width="300"
+        ></Image>
+      </main>
     </div>
   );
 }

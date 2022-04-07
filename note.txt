@@ -1,0 +1,17 @@
+external image 
+1. put the URL in the src example => copy the image ulr from the unsplash.com
+2. go to next.config and copy 
+
+images: {
+    domains: ["images.unsplash.com"],
+  }, 
+
+  and add in nextConfig object
+
+3. restart your compiler
+
+
+---
+internal image 
+1. Add Your Image in the public dir
+2. src="/<Image_Name.png>"
