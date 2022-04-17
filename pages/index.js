@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Text } from "@chakra-ui/react";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -16,20 +15,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Text>Image Optimization</Text>
-        <Image
-          alt="demo image"
-          src="/thirdtest.png"
-          height="450"
-          width="300"
-        ></Image>
-
-        <Image
-          alt="we are one"
-          src="https://images.unsplash.com/photo-1648544373484-b327f2051e60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-          height="300"
-          width="300"
-        ></Image>
+        <Text>Home Page</Text>
       </main>
     </div>
   );
